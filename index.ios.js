@@ -12,20 +12,24 @@ import {
   View
 } from 'react-native';
 
+import Header from './src/components/Header'
+import FilmsList from './src/components/FilmsList'
+import FilmsPage from './src/containers/FilmsPage'
+
 export default class TestProjectReactNative extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={{flex: 1}}>
+        <Header headerText="Hello!" />
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        < FilmsPage >
+          < FilmsList />
+        </ FilmsPage >
       </View>
     );
   }
